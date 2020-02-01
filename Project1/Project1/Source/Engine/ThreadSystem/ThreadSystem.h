@@ -1,0 +1,16 @@
+#pragma once
+#include <cstdint>
+
+namespace Engine
+{
+	namespace ThreadSystem
+	{
+		// äJén
+		void Startup(int32_t threadCount = -1);
+
+		void WaitAll();
+
+		// èIóπ
+		void Shutdown();
+	}
+}

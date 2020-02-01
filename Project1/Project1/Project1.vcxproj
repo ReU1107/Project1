@@ -1,0 +1,838 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{F9D49339-114E-41F8-B878-FC3CE5DB82BD}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Project1</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <CodeAnalysisRuleSet>NativeRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions);BT_THREADSAFE=1;BT_USE_DOUBLE_PRECISION</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>$(ProjectDir)Source/PreCompiled.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>$(ProjectDir)Source/PreCompiled.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>C:\Users\reu11\Desktop\GitHub\bullet3-master\src</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\reu11\Desktop\GitHub\bullet3-master\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions);BT_THREADSAFE=1;BT_USE_DOUBLE_PRECISION</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>$(ProjectDir)Source/PreCompiled.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>$(ProjectDir)Source/PreCompiled.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>C:\Users\reu11\Desktop\GitHub\bullet3-master\src</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\reu11\Desktop\GitHub\bullet3-master\bin;</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Library\DirectXTex\Include\DDSTextureLoader12.cpp" />
+    <ClCompile Include="Library\DirectXTex\Include\WICTextureLoader12.cpp" />
+    <ClCompile Include="Library\imgui\imgui.cpp" />
+    <ClCompile Include="Library\imgui\imgui_demo.cpp" />
+    <ClCompile Include="Library\imgui\imgui_draw.cpp" />
+    <ClCompile Include="Library\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Source\CustomPass\BasePass.cpp" />
+    <ClCompile Include="Source\CustomPass\GBufferDebugPass.cpp" />
+    <ClCompile Include="Source\CustomPass\LightingPass.cpp" />
+    <ClCompile Include="Source\CustomPass\LineRenderPass.cpp" />
+    <ClCompile Include="Source\CustomPass\PathTracingPass.cpp" />
+    <ClCompile Include="Source\CustomPass\PreZPass.cpp" />
+    <ClCompile Include="Source\CustomPass\RaytracingShadowPass.cpp" />
+    <ClCompile Include="Source\CustomPass\RaytracingTestPass.cpp" />
+    <ClCompile Include="Source\CustomPass\SkinningPass.cpp" />
+    <ClCompile Include="Source\CustomPass\StaticBasePass.cpp" />
+    <ClCompile Include="Source\CustomPass\TestPass.cpp" />
+    <ClCompile Include="Source\CustomPass\VolumeRenderingPass.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Avatar\Avatar.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Avatar\AvatarBuilder.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Avatar\AvatarMask.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Avatar\BodyPart.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Avatar\SkeletonBone.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Controller\AnimatorController.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Controller\AnimatorControllerLayer.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Controller\AnimatorControllerParameter.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Enumerations\AvatarMaskBodyPart.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Enumerations\Axis.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Enumerations\HumanBodyBones.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Motion\AnimationClip.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Motion\AnimationCurve.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Motion\BlendTree.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Motion\ChildMotion.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Motion\Keyframe.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Motion\Motion.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Property\AnimationProperty.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Property\AnimationPropertyColor32.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Property\AnimationPropertyColor4.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Property\AnimationPropertyFloat.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Property\AnimationPropertyQuaternion.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Property\AnimationPropertyVector2.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Property\AnimationPropertyVector3.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\Property\AnimationPropertyVector4.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\State\AnimationEvent.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\State\AnimationState.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\State\AnimatorCondition.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\State\AnimatorState.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\State\AnimatorStateMachine.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\State\AnimatorStateTransition.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\State\ChildAnimatorState.cpp" />
+    <ClCompile Include="Source\Engine\AnimationSystem\State\ChildAnimatorStateMachine.cpp" />
+    <ClCompile Include="Source\Engine\AudioSystem\AudioBuffer.cpp" />
+    <ClCompile Include="Source\Engine\AudioSystem\AudioClip.cpp" />
+    <ClCompile Include="Source\Engine\AudioSystem\AudioMixerGroup.cpp" />
+    <ClCompile Include="Source\Engine\AudioSystem\AudioScene.cpp" />
+    <ClCompile Include="Source\Engine\AudioSystem\AudioVoiceData.cpp" />
+    <ClCompile Include="Source\Engine\AudioSystem\DXA2.cpp" />
+    <ClCompile Include="Source\Engine\AudioSystem\DXA2\DXA2AudioEffect.cpp" />
+    <ClCompile Include="Source\Engine\AudioSystem\DXA2\DXA2AudioSubMixer.cpp" />
+    <ClCompile Include="Source\Engine\AudioSystem\DXA2\DXA2AudioVoice.cpp" />
+    <ClCompile Include="Source\Engine\AudioSystem\DXA2\DXA2Device.cpp" />
+    <ClCompile Include="Source\Engine\AudioSystem\DXA2\DXA2ReverbEffect.cpp" />
+    <ClCompile Include="Source\Engine\AudioSystem\OAL\OALDevice.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Behaviour\Animator.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Behaviour\AudioListener.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Behaviour\AudioSource.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Behaviour\Behaviour.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Bone\Bone.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Behaviour\Camera.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Behaviour\Light.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Behaviour\MonoBehaviour.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Bone\FKBone.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Bone\IKBone.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Collider\BoxCollider.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Collider\CapsuleCollider.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Collider\Collider.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Collider\SphereCollider.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Component.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Filter\Filter.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Filter\MeshFilter.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Joint\HingeJoint.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Joint\Joint.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Joint\SpringJoint.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Renderer\BillboardRenderer.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Renderer\LineRenderer.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Renderer\MeshRenderer.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Renderer\RayTracer.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Renderer\Renderer.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Renderer\SkinnedMeshRenderer.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Renderer\SpriteRenderer.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\RigidBody.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\SoftBody.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\Component\Transform.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\GameObject.cpp" />
+    <ClCompile Include="Source\Engine\GameObject\GameObjectLayer.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\D3D12.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\D3D12\D3D12AccelerationStructure.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\D3D12\D3D12BottomLevelAccelerationStructure.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\D3D12\D3D12CommandList.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\D3D12\D3D12CommandQueue.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\D3D12\D3D12ComputePipeline.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\D3D12\D3D12Desc.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\D3D12\D3D12DescriptorHeap.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\D3D12\D3D12Device.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\D3D12\D3D12Enumeration.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\D3D12\D3D12RasterizerPipeline.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\D3D12\D3D12RaytracingPipeline.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\D3D12\D3D12Resource.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\D3D12\D3D12ResourceView.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\D3D12\D3D12RootSignature.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\D3D12\D3D12Shader.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\D3D12\D3D12TopLevelAccelerationStructure.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Description\BlendDesc.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Description\BufferDesc.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Description\DepthStencilDesc.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Description\RasterizerDesc.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Description\RenderTargetBlendDesc.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Description\TextureDesc.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\DeviceFactory.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\DXGI\DXGIAdapter.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\DXGI\DXGIFactory.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\DXGI\DXGISwapChain.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Graphics.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\GraphicsPass\ComputePass.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\GraphicsPass\ComputePipeline.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\GraphicsPass\GraphicsPass.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\GraphicsPass\RasterizerPipeline.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\GraphicsPass\RaytracingPass.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\GraphicsPass\RaytracingPipeline.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\GraphicsPass\RenderingPass.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\HardwareBuffer\AccelerationStructure.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\HardwareBuffer\BottomLevelAccelerationStructure.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\HardwareBuffer\Buffer.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\HardwareBuffer\ConstantBuffer.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\HardwareBuffer\IndexBuffer.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\HardwareBuffer\Resource.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\HardwareBuffer\ResourceDescriptor.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\HardwareBuffer\ResourceView.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\HardwareBuffer\RootSignature.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\HardwareBuffer\SamplerState.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\HardwareBuffer\StructuredBuffer.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\HardwareBuffer\TopLevelAccelerationStructure.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\HardwareBuffer\VertexBuffer.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\HardwareCommand\CommandList.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\HardwareCommand\CommandQueue.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\HardwareCommand\ComputeCommandList.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\HardwareCommand\ComputeCommandQueue.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\HardwareCommand\CopyCommandList.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\HardwareCommand\CopyCommandQueue.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\HardwareCommand\GraphicsCommandList.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\HardwareCommand\GraphicsCommandQueue.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Mesh\BlendShape.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Mesh\Material.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Mesh\Mesh.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Mesh\ProceduralMesh.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Mesh\RaytracingMesh.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Mesh\RaytracingSubMesh.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Mesh\SkeletalMesh.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Mesh\Sprite.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Mesh\StaticMesh.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Mesh\SubMesh.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Shader\Shader.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Shader\ShaderCompiler.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Shader\ShaderLibrary.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Shader\ShaderRecord.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Shader\ShaderTable.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Texture\DDSLoader.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Texture\DepthTexture.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Texture\HDRLoader.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Texture\RenderTexture.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Texture\Texture.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Texture\Texture2D.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Texture\TGALoader.cpp" />
+    <ClCompile Include="Source\Engine\GraphicsSystem\Texture\WICLoader.cpp" />
+    <ClCompile Include="Source\Engine\GUISystem\GUISystem.cpp" />
+    <ClCompile Include="Source\Engine\Include.cpp" />
+    <ClCompile Include="Source\Engine\Math\Color4.cpp" />
+    <ClCompile Include="Source\Engine\Math\CurveHelper.cpp" />
+    <ClCompile Include="Source\Engine\Math\Matrix4x4.cpp" />
+    <ClCompile Include="Source\Engine\Math\Vector3.cpp" />
+    <ClCompile Include="Source\Engine\Math\Vector4.cpp" />
+    <ClCompile Include="Source\Engine\Object.cpp" />
+    <ClCompile Include="Source\Engine\PhysicsSystem\AABB.cpp" />
+    <ClCompile Include="Source\Engine\PhysicsSystem\Collision.cpp" />
+    <ClCompile Include="Source\Engine\PhysicsSystem\CollisionShape\BoxShape.cpp" />
+    <ClCompile Include="Source\Engine\PhysicsSystem\CollisionShape\CapsuleShape.cpp" />
+    <ClCompile Include="Source\Engine\PhysicsSystem\CollisionShape\CollisionShape.cpp" />
+    <ClCompile Include="Source\Engine\PhysicsSystem\CollisionShape\SphereShape.cpp" />
+    <ClCompile Include="Source\Engine\PhysicsSystem\LineSegment.cpp" />
+    <ClCompile Include="Source\Engine\PhysicsSystem\Physics.cpp" />
+    <ClCompile Include="Source\Engine\PhysicsSystem\PhysicsMaterial.cpp" />
+    <ClCompile Include="Source\Engine\PhysicsSystem\PhysicsScene.cpp" />
+    <ClCompile Include="Source\Engine\PhysicsSystem\Plane.cpp" />
+    <ClCompile Include="Source\Engine\PhysicsSystem\Sphere.cpp" />
+    <ClCompile Include="Source\Engine\SceneManagement\Scene.cpp" />
+    <ClCompile Include="Source\Engine\SceneManagement\SceneManagement.cpp" />
+    <ClCompile Include="Source\Engine\SceneManagement\SceneManager.cpp" />
+    <ClCompile Include="Source\Engine\String\FName.cpp" />
+    <ClCompile Include="Source\Engine\ThreadSystem\Request.cpp" />
+    <ClCompile Include="Source\Engine\ThreadSystem\RequestManager.cpp" />
+    <ClCompile Include="Source\Engine\ThreadSystem\ThreadGroup.cpp" />
+    <ClCompile Include="Source\Engine\ThreadSystem\ThreadSystem.cpp" />
+    <ClCompile Include="Source\Engine\Utility\AsyncJob.cpp" />
+    <ClCompile Include="Source\Engine\Utility\BinaryReader.cpp" />
+    <ClCompile Include="Source\Engine\Utility\Reference.cpp" />
+    <ClCompile Include="Source\Engine\Utility\Timer.cpp" />
+    <ClCompile Include="Source\PMX\PMXBinaryReader.cpp" />
+    <ClCompile Include="Source\PMX\PMXDataModel.cpp" />
+    <ClCompile Include="Source\PMX\PMXLoader.cpp" />
+    <ClCompile Include="Source\PMX\PMXMeshFactory.cpp" />
+    <ClCompile Include="Source\PMX\PMXModelFactory.cpp" />
+    <ClCompile Include="Source\PreCompiled.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)Source/PreCompiled.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)Source/PreCompiled.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Source\Scene\GameScene.cpp" />
+    <ClCompile Include="Source\Scene\TitleScene.cpp" />
+    <ClCompile Include="Source\Script\BoneDisplay.cpp" />
+    <ClCompile Include="Source\Script\CameraController.cpp" />
+    <ClCompile Include="Source\Script\GroupController.cpp" />
+    <ClCompile Include="Source\Script\LightController.cpp" />
+    <ClCompile Include="Source\Script\PlayerController.cpp" />
+    <ClCompile Include="Source\Script\PMXBoneController.cpp" />
+    <ClCompile Include="Source\Script\TerrainController.cpp" />
+    <ClCompile Include="Source\Script\WAVSpeaker.cpp" />
+    <ClCompile Include="Source\Test4.cpp" />
+    <ClCompile Include="Source\VMD\VMDBinaryReader.cpp" />
+    <ClCompile Include="Source\VMD\VMDClipFactory.cpp" />
+    <ClCompile Include="Source\VMD\VMDDataModel.cpp" />
+    <ClCompile Include="Source\VMD\VMDLoader.cpp" />
+    <ClCompile Include="Source\WAV\RIFFBinaryReader.cpp" />
+    <ClCompile Include="Source\WAV\RIFFDataModel.cpp" />
+    <ClCompile Include="Source\WAV\WAVLoader.cpp" />
+    <ClCompile Include="Source\WinMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Library\bullet\Include\btBulletCollisionCommon.h" />
+    <ClInclude Include="Library\bullet\Include\btBulletDynamicsCommon.h" />
+    <ClInclude Include="Library\DirectXTex\Include\d3dx12.h" />
+    <ClInclude Include="Library\DirectXTex\Include\DDSTextureLoader12.h" />
+    <ClInclude Include="Library\DirectXTex\Include\DirectXTex.h" />
+    <ClInclude Include="Library\DirectXTex\Include\WICTextureLoader12.h" />
+    <ClInclude Include="Library\imgui\imconfig.h" />
+    <ClInclude Include="Library\imgui\imgui.h" />
+    <ClInclude Include="Library\imgui\imgui_internal.h" />
+    <ClInclude Include="Library\imgui\imstb_rectpack.h" />
+    <ClInclude Include="Library\imgui\imstb_textedit.h" />
+    <ClInclude Include="Library\imgui\imstb_truetype.h" />
+    <ClInclude Include="Source\Application.h" />
+    <ClInclude Include="Source\CustomPass\BasePass.h" />
+    <ClInclude Include="Source\CustomPass\GBufferDebugPass.h" />
+    <ClInclude Include="Source\CustomPass\LightingPass.h" />
+    <ClInclude Include="Source\CustomPass\LineRenderPass.h" />
+    <ClInclude Include="Source\CustomPass\PathTracingPass.h" />
+    <ClInclude Include="Source\CustomPass\PreZPass.h" />
+    <ClInclude Include="Source\CustomPass\RaytracingShadowPass.h" />
+    <ClInclude Include="Source\CustomPass\RaytracingTestPass.h" />
+    <ClInclude Include="Source\CustomPass\SkinningPass.h" />
+    <ClInclude Include="Source\CustomPass\StaticBasePass.h" />
+    <ClInclude Include="Source\CustomPass\TestPass.h" />
+    <ClInclude Include="Source\CustomPass\VolumeRenderingPass.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Avatar\Avatar.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Avatar\AvatarBuilder.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Avatar\AvatarMask.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Avatar\BodyPart.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Avatar\HumanDescription.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Avatar\Include.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Avatar\SkeletonBone.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Controller\AnimatorController.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Controller\AnimatorControllerLayer.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Controller\AnimatorControllerParameter.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Controller\Include.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Enumerations\AnimatorConditionMode.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Enumerations\AnimatorControllerParameterType.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Enumerations\AvatarMaskBodyPart.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Enumerations\Axis.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Enumerations\BlendTreeType.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Enumerations\HumanBodyBones.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Enumerations\WeightedMode.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Enumerations\WrapMode.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Include.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Motion\AnimationClip.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Motion\AnimationCurve.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Motion\BlendTree.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Motion\ChildMotion.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Motion\Include.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Motion\Keyframe.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Motion\Motion.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Property\AnimationProperty.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Property\AnimationPropertyColor32.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Property\AnimationPropertyColor4.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Property\AnimationPropertyFloat.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Property\AnimationPropertyQuaternion.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Property\AnimationPropertyVector2.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Property\AnimationPropertyVector3.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Property\AnimationPropertyVector4.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\Property\Include.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\State\AnimationEvent.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\State\AnimationState.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\State\AnimatorCondition.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\State\AnimatorState.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\State\AnimatorStateMachine.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\State\AnimatorStateTransition.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\State\ChildAnimatorState.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\State\ChildAnimatorStateMachine.h" />
+    <ClInclude Include="Source\Engine\AnimationSystem\State\Include.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\AudioBuffer.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\AudioClip.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\AudioDescription.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\AudioEffectData.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\AudioLoader.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\AudioMasterData.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\AudioMixerGroup.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\AudioMixerSnapshot.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\AudioScene.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\AudioSubMixerData.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\AudioVoiceData.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\DXA2.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\DXA2\DXA2AudioCallback.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\DXA2\DXA2AudioEffect.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\DXA2\DXA2AudioSubMixer.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\DXA2\DXA2AudioVoice.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\DXA2\DXA2Device.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\DXA2\DXA2LowPassEffect.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\DXA2\DXA2ReverbEffect.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Enumerations\AudioAPI.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Enumerations\AudioClipLoadType.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Enumerations\AudioDataLoadState.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Enumerations\AudioEffectLayout.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Enumerations\AudioEventID.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Enumerations\DigitalFormat.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Include.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Interface\IAudioCallback.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Interface\IAudioComponent.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Interface\IAudioDevice.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Interface\IAudioDistortionEffect.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Interface\IAudioEchoEffect.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Interface\IAudioEffect.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Interface\IAudioEvent.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Interface\IAudioFlangeEffect.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Interface\IAudioHighPassEffect.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Interface\IAudioListener.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Interface\IAudioLowPassEffect.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Interface\IAudioMaster.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Interface\IAudioMixer.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Interface\IAudioNormalizeEffect.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Interface\IAudioReverbEffect.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Interface\IAudioSubMixer.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Interface\IAudioVoice.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\Interface\IUnknown.h" />
+    <ClInclude Include="Source\Engine\AudioSystem\OAL\OALDevice.h" />
+    <ClInclude Include="Source\Engine\CameraData.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Behaviour\Animator.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Behaviour\AudioListener.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Behaviour\AudioSource.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Behaviour\Behaviour.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Body\Body.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Bone\Bone.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Behaviour\Camera.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Behaviour\Enumerations\CameraEvent.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Behaviour\Enumerations\DepthTextureMode.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Behaviour\Enumerations\LightEvent.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Behaviour\Enumerations\LightType.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Behaviour\Enumerations\ShadowResolution.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Behaviour\Light.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Behaviour\MonoBehaviour.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Bone\FKBone.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Bone\IKBone.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Collider\BoxCollider.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Collider\CapsuleCollider.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Collider\Collider.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Collider\SphereCollider.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Component.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\ComponentImpl.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Filter\Filter.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Filter\MeshFilter.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Include.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Joint\HingeJoint.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Joint\Joint.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Joint\SpringJoint.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Renderer\BillboardRenderer.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Renderer\Enumerations\ShadowCastingMode.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Renderer\LineRenderer.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Renderer\MeshRenderer.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Renderer\RayTracer.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Renderer\Renderer.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Renderer\SkinnedMeshRenderer.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Renderer\SpriteRenderer.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\RigidBody.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\SoftBody.h" />
+    <ClInclude Include="Source\Engine\GameObject\Component\Transform.h" />
+    <ClInclude Include="Source\Engine\GameObject\GameObject.h" />
+    <ClInclude Include="Source\Engine\GameObject\GameObjectImpl.h" />
+    <ClInclude Include="Source\Engine\GameObject\GameObjectLayer.h" />
+    <ClInclude Include="Source\Engine\GameObject\Include.h" />
+    <ClInclude Include="Source\Engine\GameObject\SearchPriority.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\D3D12.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\D3D12\D3D12AccelerationStructure.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\D3D12\D3D12BottomLevelAccelerationStructure.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\D3D12\D3D12CommandList.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\D3D12\D3D12CommandQueue.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\D3D12\D3D12ComputePipeline.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\D3D12\D3D12Desc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\D3D12\D3D12DescriptorHeap.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\D3D12\D3D12Device.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\D3D12\D3D12Enumeration.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\D3D12\D3D12GraphicsPipeline.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\D3D12\D3D12RasterizerPipeline.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\D3D12\D3D12RaytracingPipeline.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\D3D12\D3D12Resource.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\D3D12\D3D12ResourceView.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\D3D12\D3D12RootSignature.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\D3D12\D3D12Shader.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\D3D12\D3D12TopLevelAccelerationStructure.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\BlendDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\BottomLevelAccelerationStructureDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\BufferDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\CommandListDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\CommandQueueDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\ComputePipelineDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\CopyableResourceDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\DepthStencilDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\DepthStencilOperationDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\DescriptorHeapDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\Include.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\InputElementDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\InputLayoutDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\RasterizerDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\RasterizerPipelineDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\RaytracingAssociationDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\RaytracingDispatchDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\RaytracingHitGroupDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\RaytracingPipelineConfigDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\RaytracingPipelineDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\RaytracingPipelineParameterDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\RaytracingShaderConfigDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\RaytracingShaderLibraryDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\RaytracingSignatureDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\RenderTargetBlendDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\ResourceViewDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\RootSignatureDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\ShaderResourceConstantsDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\ShaderResourceDescriptorDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\ShaderResourceLayoutDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\ShaderResourceParameterDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\SubBottomLevelAccelerationStructureDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\SubTopLevelAccelerationStructureDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\SwapChainDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\TextureDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Description\TopLevelAccelerationStructureDesc.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\DeviceFactory.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\DXGI\DXGIAdapter.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\DXGI\DXGIFactory.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\DXGI\DXGISwapChain.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\API.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\BlendFactor.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\BlendOperation.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\BottomLevelAccelerationBuildFlags.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\BottomLevelAccelerationStructureFlags.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\BottomLevelType.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\BufferType.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\CommandListType.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\CommandQueuePriority.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\ComparisonFunction.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\ConservativeMode.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\CullType.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\DepthWriteMask.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\DescriptorHeapType.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\FillType.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\Include.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\IndexFormat.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\InputClassification.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\LogicOperation.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\PrimitiveTopology.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\RaytracingPipelineParameterType.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\ResourceDimension.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\ResourceFlags.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\ResourceFormat.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\ResourceStates.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\ResourceViewType.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\RootSignatureFlags.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\RootSignatureType.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\ShaderRecordType.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\ShaderResourceLayoutType.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\ShaderResourceType.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\ShaderTableType.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\ShaderType.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\StencilOperation.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\SubTopLevelAccelerationStructureFlags.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\TextureUsage.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Enumerations\VertexFormat.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Graphics.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\GraphicsPass\ComputePass.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\GraphicsPass\ComputePipeline.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\GraphicsPass\GraphicsPass.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\GraphicsPass\Include.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\GraphicsPass\RasterizerPipeline.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\GraphicsPass\RaytracingPass.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\GraphicsPass\RaytracingPipeline.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\GraphicsPass\RenderingPass.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\HardwareBuffer\AccelerationStructure.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\HardwareBuffer\BottomLevelAccelerationStructure.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\HardwareBuffer\Buffer.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\HardwareBuffer\ConstantBuffer.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\HardwareBuffer\Include.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\HardwareBuffer\IndexBuffer.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\HardwareBuffer\Resource.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\HardwareBuffer\ResourceDescriptor.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\HardwareBuffer\ResourceView.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\HardwareBuffer\RootSignature.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\HardwareBuffer\SamplerState.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\HardwareBuffer\StructuredBuffer.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\HardwareBuffer\TopLevelAccelerationStructure.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\HardwareBuffer\VertexBuffer.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\HardwareCommand\CommandList.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\HardwareCommand\CommandQueue.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\HardwareCommand\ComputeCommandList.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\HardwareCommand\ComputeCommandQueue.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\HardwareCommand\CopyCommandList.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\HardwareCommand\CopyCommandQueue.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\HardwareCommand\GraphicsCommandList.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\HardwareCommand\GraphicsCommandQueue.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\HardwareCommand\Include.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Include.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Interface\IAccelerationStructure.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Interface\IAdapter.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Interface\ICommandList.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Interface\ICommandQueue.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Interface\IComputePipeline.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Interface\IContext.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Interface\IDescriptorHeap.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Interface\IDevice.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Interface\IFactory.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Interface\Include.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Interface\IPipeline.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Interface\IRasterizerPipeline.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Interface\IRaytracingPipeline.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Interface\IResource.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Interface\IResourceView.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Interface\IRootSignature.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Interface\IShader.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Interface\IShaderSignature.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Interface\ISwapChain.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Mesh\BlendShape.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Mesh\BlendShapeDeltaValue.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Mesh\BoneWeight.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Mesh\Include.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Mesh\Material.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Mesh\Mesh.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Mesh\ProceduralMesh.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Mesh\RaytracingMesh.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Mesh\RaytracingSubMesh.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Mesh\SkeletalMesh.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Mesh\Sprite.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Mesh\StaticMesh.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Mesh\SubMesh.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Shader\Include.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Shader\Shader.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Shader\ShaderCompiler.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Shader\ShaderLibrary.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Shader\ShaderRecord.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Shader\ShaderStructured.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Shader\ShaderTable.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Texture\DDSLoader.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Texture\DepthTexture.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Texture\HDRLoader.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Texture\Include.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Texture\RenderTexture.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Texture\Texture.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Texture\Texture2D.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Texture\TGALoader.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Texture\VolumeTexture.h" />
+    <ClInclude Include="Source\Engine\GraphicsSystem\Texture\WICLoader.h" />
+    <ClInclude Include="Source\Engine\GUISystem\GUISystem.h" />
+    <ClInclude Include="Source\Engine\GUISystem\Include.h" />
+    <ClInclude Include="Source\Engine\Include.h" />
+    <ClInclude Include="Source\Engine\InstanceID.h" />
+    <ClInclude Include="Source\Engine\LightData.h" />
+    <ClInclude Include="Source\Engine\Math\Color3.h" />
+    <ClInclude Include="Source\Engine\Math\Color4.h" />
+    <ClInclude Include="Source\Engine\Math\CurveHelper.h" />
+    <ClInclude Include="Source\Engine\Math\CurveHelperImpl.h" />
+    <ClInclude Include="Source\Engine\Math\Include.h" />
+    <ClInclude Include="Source\Engine\Math\Math.h" />
+    <ClInclude Include="Source\Engine\Math\MathF.h" />
+    <ClInclude Include="Source\Engine\Math\MathFImpl.h" />
+    <ClInclude Include="Source\Engine\Math\Matrix4x4.h" />
+    <ClInclude Include="Source\Engine\Math\Quaternion.h" />
+    <ClInclude Include="Source\Engine\Math\QuaternionImpl.h" />
+    <ClInclude Include="Source\Engine\Math\Rect.h" />
+    <ClInclude Include="Source\Engine\Math\RotationOrder.h" />
+    <ClInclude Include="Source\Engine\Math\Vector2.h" />
+    <ClInclude Include="Source\Engine\Math\Vector3.h" />
+    <ClInclude Include="Source\Engine\Math\Vector4.h" />
+    <ClInclude Include="Source\Engine\Math\Viewport.h" />
+    <ClInclude Include="Source\Engine\ModelData.h" />
+    <ClInclude Include="Source\Engine\Object.h" />
+    <ClInclude Include="Source\Engine\PhysicsSystem\AABB.h" />
+    <ClInclude Include="Source\Engine\PhysicsSystem\Capsule.h" />
+    <ClInclude Include="Source\Engine\PhysicsSystem\Collision.h" />
+    <ClInclude Include="Source\Engine\PhysicsSystem\CollisionShape\BoxShape.h" />
+    <ClInclude Include="Source\Engine\PhysicsSystem\CollisionShape\CapsuleShape.h" />
+    <ClInclude Include="Source\Engine\PhysicsSystem\CollisionShape\CollisionShape.h" />
+    <ClInclude Include="Source\Engine\PhysicsSystem\CollisionShape\SphereShape.h" />
+    <ClInclude Include="Source\Engine\PhysicsSystem\Include.h" />
+    <ClInclude Include="Source\Engine\PhysicsSystem\LineSegment.h" />
+    <ClInclude Include="Source\Engine\PhysicsSystem\OBB.h" />
+    <ClInclude Include="Source\Engine\PhysicsSystem\Physics.h" />
+    <ClInclude Include="Source\Engine\PhysicsSystem\PhysicsMaterial.h" />
+    <ClInclude Include="Source\Engine\PhysicsSystem\PhysicsScene.h" />
+    <ClInclude Include="Source\Engine\PhysicsSystem\Plane.h" />
+    <ClInclude Include="Source\Engine\PhysicsSystem\Ray.h" />
+    <ClInclude Include="Source\Engine\PhysicsSystem\Sphere.h" />
+    <ClInclude Include="Source\Engine\SceneManagement\Include.h" />
+    <ClInclude Include="Source\Engine\SceneManagement\Scene.h" />
+    <ClInclude Include="Source\Engine\SceneManagement\SceneManagement.h" />
+    <ClInclude Include="Source\Engine\SceneManagement\SceneManager.h" />
+    <ClInclude Include="Source\Engine\String\BaseString.h" />
+    <ClInclude Include="Source\Engine\String\BaseStringImpl.h" />
+    <ClInclude Include="Source\Engine\String\FName.h" />
+    <ClInclude Include="Source\Engine\String\Include.h" />
+    <ClInclude Include="Source\Engine\String\StringHelper.h" />
+    <ClInclude Include="Source\Engine\String\StringHelperImpl.h" />
+    <ClInclude Include="Source\Engine\ThreadSystem\Include.h" />
+    <ClInclude Include="Source\Engine\ThreadSystem\Request.h" />
+    <ClInclude Include="Source\Engine\ThreadSystem\RequestGroup.h" />
+    <ClInclude Include="Source\Engine\ThreadSystem\RequestManager.h" />
+    <ClInclude Include="Source\Engine\ThreadSystem\ThreadGroup.h" />
+    <ClInclude Include="Source\Engine\ThreadSystem\ThreadSystem.h" />
+    <ClInclude Include="Source\Engine\Utility\AccessObject.h" />
+    <ClInclude Include="Source\Engine\Utility\AsyncJob.h" />
+    <ClInclude Include="Source\Engine\Utility\BinaryReader.h" />
+    <ClInclude Include="Source\Engine\Utility\ComPtr.h" />
+    <ClInclude Include="Source\Engine\Utility\EnumOperator.h" />
+    <ClInclude Include="Source\Engine\Utility\FrameRate.h" />
+    <ClInclude Include="Source\Engine\Utility\Include.h" />
+    <ClInclude Include="Source\Engine\Utility\IUnknown.h" />
+    <ClInclude Include="Source\Engine\Utility\Reference.h" />
+    <ClInclude Include="Source\Engine\Utility\ShaderCommonData.h" />
+    <ClInclude Include="Source\Engine\Utility\SingletonHolder.h" />
+    <ClInclude Include="Source\Engine\Utility\SingletonObject.h" />
+    <ClInclude Include="Source\Engine\Utility\Timer.h" />
+    <ClInclude Include="Source\Engine\Utility\Utility.h" />
+    <ClInclude Include="Source\Engine\Utility\Vector.h" />
+    <ClInclude Include="Source\PMX\PMXBinaryReader.h" />
+    <ClInclude Include="Source\PMX\PMXDataModel.h" />
+    <ClInclude Include="Source\PMX\PMXLoader.h" />
+    <ClInclude Include="Source\PMX\PMXMeshFactory.h" />
+    <ClInclude Include="Source\PMX\PMXModelFactory.h" />
+    <ClInclude Include="Source\PreCompiled.h" />
+    <ClInclude Include="Source\Resolution.h" />
+    <ClInclude Include="Source\Scene\GameScene.h" />
+    <ClInclude Include="Source\Scene\TitleScene.h" />
+    <ClInclude Include="Source\Script\BoneDisplay.h" />
+    <ClInclude Include="Source\Script\CameraController.h" />
+    <ClInclude Include="Source\Script\GroupController.h" />
+    <ClInclude Include="Source\Script\LightController.h" />
+    <ClInclude Include="Source\Script\PlayerController.h" />
+    <ClInclude Include="Source\Script\PMXBoneController.h" />
+    <ClInclude Include="Source\Script\TerrainController.h" />
+    <ClInclude Include="Source\Script\WAVSpeaker.h" />
+    <ClInclude Include="Source\Test4.h" />
+    <ClInclude Include="Source\VMD\VMDBinaryReader.h" />
+    <ClInclude Include="Source\VMD\VMDClipFactory.h" />
+    <ClInclude Include="Source\VMD\VMDDataModel.h" />
+    <ClInclude Include="Source\VMD\VMDLoader.h" />
+    <ClInclude Include="Source\WAV\RIFFBinaryReader.h" />
+    <ClInclude Include="Source\WAV\RIFFDataModel.h" />
+    <ClInclude Include="Source\WAV\WAVLoader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Library\DirectXTex\Include\DirectXTex.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
